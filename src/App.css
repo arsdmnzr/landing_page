@@ -1,0 +1,187 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.fa-solid{
+  display: none;
+}
+.logo{
+  display: inline;
+}
+
+header{
+  grid-area: header;
+  /* padding: 20px; */
+}
+
+ul{
+  display: flex;
+  justify-content: right;
+}
+
+a{
+  margin-right: 20px;
+  text-decoration: none;
+  color: gray;
+}
+a:hover{
+  color: brown;
+  cursor: pointer;
+}
+ul li{
+  list-style: none;
+}
+
+.container{
+  padding: 50px 200px;
+  display: grid;
+  gap: 20px;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: 0.8fr 0.5fr 0.5fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 'header header header '
+  'top top side'
+  'middle middle side'
+  'bottom bottom bottom' ;
+}
+
+.top{
+grid-area: top;
+}
+.top img{
+  width: 100%;
+}
+.middle{
+grid-area: middle;
+display: flex;
+justify-content: space-between;
+}
+.bottom{
+grid-area: bottom;
+display: flex;
+justify-content: space-between;
+}
+.side{
+  padding: 30px;
+  width: 97%;
+  grid-area: side;
+  background-color: black;
+  color: white;
+}
+.mid{
+  font-weight: 800;
+  font-size: 50px;
+}
+
+.para{
+  padding: 0px 90px;
+}
+#btn{
+  background-color: red;
+  color: white;
+  padding: 10px 30px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin: 40px 90px;
+}
+.bottom img{
+  display: block;
+  height: 80%;
+  padding-right: 20px;
+}
+.bottom h2{
+  display: block;
+  color: grey;
+  padding: 15px;
+}
+.bottom h3{
+  margin-bottom: 10px;
+}
+.side h3{
+  margin: 10px 0;
+}
+.side p{
+  margin: 20px 0;
+}
+.side h1{
+  color: yellow;
+  margin: 10px 0;
+}
+@media screen and (max-width: 1380px) {
+  .container{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    'header'
+    'top'
+    'middle'
+    'side'
+    'bottom'
+    ;
+  }
+  .logo img{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .bottom{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .nav ul {
+    display: none;
+  }
+  .bottom p{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .fa-solid{
+    display: flex;
+    margin-top: 20px;
+    font-size: 25px;
+    justify-content: right;
+  }
+  .showData{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .open ul{
+display: block;
+position: absolute;
+right: 0px;
+top: 0;
+background-color: grey;
+height: 100%;
+width: 300px;
+  }
+  ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 5px 0px;
+font-size: larger;
+}
+ul li{
+    padding: 20px;
+    text-align: start;
+  }
+  .fa-xmark {
+position: absolute;
+top: 0;
+right: 10px;
+  }
+  
+}
